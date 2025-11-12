@@ -204,18 +204,6 @@
                 <!-- Story Hint -->
                 <text x="600" y="50" class="story-hint">A cozy café awaits... What calls to you?</text>
 
-                <!-- CLICKABLE: Window -->
-                <g id="window" class="clickable" onclick="goToScene('scene2c')">
-                    <rect x="50" y="80" width="280" height="350" fill="#87ceeb" opacity="0.6" rx="15"/>
-                    <rect x="60" y="90" width="260" height="330" fill="#b0e0e6" opacity="0.4" rx="10"/>
-                    <line x1="190" y1="90" x2="190" y2="420" stroke="#5d4227" stroke-width="8"/>
-                    <line x1="60" y1="255" x2="320" y2="255" stroke="#5d4227" stroke-width="8"/>
-                    <!-- Window reflection -->
-                    <rect x="70" y="100" width="100" height="140" fill="#ffffff" opacity="0.3" rx="5"/>
-                    <rect x="50" y="80" width="280" height="350" class="click-border" rx="15"/>
-                    <text x="190" y="460" class="click-label">LOOK OUTSIDE</text>
-                </g>
-
                 <!-- CLICKABLE: Menu -->
                 <g id="menu-clickable" class="clickable" onclick="goToScene('scene2b')">
                     <image href="menu.png" x="420" y="480" width="200" height="170" opacity="0.9" class="shimmer-animation"/>
@@ -360,111 +348,6 @@
                     <circle cx="1100" cy="700" r="65" class="click-border"/>
                     <text x="1100" y="640" class="click-label">LOOK AROUND</text>
                 </g>
-            </svg>
-        </div>
-
-        <!-- SCENE 2C: LOOK OUT THE WINDOW -->
-        <div id="scene2c" class="scene">
-            <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
-                <!-- Story Hint -->
-                <text x="600" y="40" class="story-hint">Two worlds exist side by side...</text>
-
-                <!-- Window frame -->
-                <rect x="50" y="50" width="1100" height="700" fill="#4a3420" rx="20"/>
-                <rect x="80" y="80" width="1040" height="640" fill="#87ceeb" opacity="0.3" rx="10"/>
-
-                <!-- Window divider -->
-                <rect x="590" y="80" width="20" height="640" fill="#5d4227"/>
-                <rect x="80" y="390" width="1040" height="20" fill="#5d4227"/>
-
-                <!-- LEFT SIDE: Cherry blossoms -->
-                <g id="left-side">
-                    <rect x="80" y="80" width="510" height="640" fill="#ffe4e1" opacity="0.6"/>
-
-                    <!-- Cherry blossom tree -->
-                    <rect x="200" y="500" width="40" height="220" fill="#4a3420"/>
-                    <ellipse cx="220" cy="300" rx="120" ry="140" fill="#ffb7c5" opacity="0.8"/>
-                    <ellipse cx="190" cy="250" rx="80" ry="90" fill="#ffc0cb" opacity="0.8"/>
-                    <ellipse cx="260" cy="280" rx="90" ry="100" fill="#ffb7c5" opacity="0.8"/>
-
-                    <!-- Falling petals -->
-                    <g class="petals">
-                        <ellipse cx="150" cy="200" rx="6" ry="8" fill="#ffb7c5">
-                            <animateTransform attributeName="transform" type="translate" values="0,0; 20,400" dur="8s" repeatCount="indefinite"/>
-                            <animateTransform attributeName="transform" type="rotate" values="0;360" dur="4s" repeatCount="indefinite" additive="sum"/>
-                        </ellipse>
-                        <ellipse cx="280" cy="150" rx="6" ry="8" fill="#ffc0cb">
-                            <animateTransform attributeName="transform" type="translate" values="0,0; -30,450" dur="10s" repeatCount="indefinite"/>
-                            <animateTransform attributeName="transform" type="rotate" values="0;360" dur="5s" repeatCount="indefinite" additive="sum"/>
-                        </ellipse>
-                        <ellipse cx="400" cy="250" rx="6" ry="8" fill="#ffb7c5">
-                            <animateTransform attributeName="transform" type="translate" values="0,0; 10,400" dur="9s" repeatCount="indefinite"/>
-                            <animateTransform attributeName="transform" type="rotate" values="0;360" dur="4.5s" repeatCount="indefinite" additive="sum"/>
-                        </ellipse>
-                    </g>
-
-                    <!-- Sun -->
-                    <circle cx="450" cy="200" r="50" fill="#ffe4b5" opacity="0.8"/>
-                    <circle cx="450" cy="200" r="60" fill="#ffd700" opacity="0.3"/>
-
-                    <!-- CLICKABLE: Blossoms -->
-                    <rect x="80" y="80" width="510" height="640" fill="transparent" class="clickable" onclick="goToScene('scene3')"/>
-                    <rect x="85" y="85" width="500" height="630" class="click-border" rx="8"/>
-                    <text x="335" y="680" class="click-label">SPRING MEMORIES</text>
-                </g>
-
-                <!-- RIGHT SIDE: Snowfall -->
-                <g id="right-side">
-                    <rect x="610" y="80" width="510" height="640" fill="#e6f3ff" opacity="0.7"/>
-
-                    <!-- Snowy ground -->
-                    <ellipse cx="865" cy="650" rx="300" ry="60" fill="#ffffff" opacity="0.9"/>
-                    <ellipse cx="865" cy="600" rx="250" ry="40" fill="#f0f8ff" opacity="0.7"/>
-
-                    <!-- Bare tree -->
-                    <rect x="850" y="450" width="30" height="200" fill="#3d2817"/>
-                    <path d="M 865 450 L 820 380 M 865 450 L 910 370 M 865 480 L 830 430 M 865 480 L 900 420"
-                          stroke="#3d2817" stroke-width="6" fill="none"/>
-
-                    <!-- Falling snow -->
-                    <g class="snowflakes">
-                        <circle cx="650" cy="150" r="4" fill="#ffffff">
-                            <animateTransform attributeName="transform" type="translate" values="0,0; 10,600" dur="12s" repeatCount="indefinite"/>
-                        </circle>
-                        <circle cx="750" cy="100" r="3" fill="#ffffff">
-                            <animateTransform attributeName="transform" type="translate" values="0,0; -15,620" dur="14s" repeatCount="indefinite"/>
-                        </circle>
-                        <circle cx="850" cy="120" r="4" fill="#ffffff">
-                            <animateTransform attributeName="transform" type="translate" values="0,0; 20,600" dur="13s" repeatCount="indefinite"/>
-                        </circle>
-                        <circle cx="950" cy="90" r="3" fill="#ffffff">
-                            <animateTransform attributeName="transform" type="translate" values="0,0; -10,630" dur="15s" repeatCount="indefinite"/>
-                        </circle>
-                        <circle cx="1050" cy="130" r="4" fill="#ffffff">
-                            <animateTransform attributeName="transform" type="translate" values="0,0; 5,600" dur="11s" repeatCount="indefinite"/>
-                        </circle>
-                        <circle cx="700" cy="200" r="3" fill="#ffffff">
-                            <animateTransform attributeName="transform" type="translate" values="0,0; 15,550" dur="13s" repeatCount="indefinite"/>
-                        </circle>
-                    </g>
-
-                    <!-- CLICKABLE: Snow -->
-                    <rect x="610" y="80" width="510" height="640" fill="transparent" class="clickable" onclick="goToScene('scene3')"/>
-                    <rect x="615" y="85" width="500" height="630" class="click-border" rx="8"/>
-                    <text x="865" y="680" class="click-label">WINTER SOLITUDE</text>
-                </g>
-
-                <!-- CLICKABLE: Back inside -->
-                <g id="back-inside" class="clickable" onclick="goToScene('scene1')">
-                    <circle cx="600" cy="760" r="50" fill="#4a3420" opacity="0.8"/>
-                    <path d="M 575 760 L 625 760 M 600 735 L 600 785" stroke="#d4a574" stroke-width="5"/>
-                    <circle cx="600" cy="760" r="55" class="click-border"/>
-                </g>
-                <text x="600" y="720" class="click-label">RETURN TO CAFÉ</text>
-
-                <!-- Café lights reflection in glass -->
-                <circle cx="300" cy="300" r="30" fill="#ffe4b5" opacity="0.2" class="glow-animation"/>
-                <circle cx="900" cy="250" r="25" fill="#ffe4b5" opacity="0.2" class="glow-animation"/>
             </svg>
         </div>
 
